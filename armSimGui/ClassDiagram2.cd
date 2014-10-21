@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="armsim.Memory" Collapsed="true">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQgQAAEIAAIAAAAAAAIAAAAggAAAANAgAAAAAAAAAAA=</HashCode>
+      <FileName>armsim.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Computer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="armsim.Registers" Collapsed="true">
+    <Position X="6.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>armsim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="armsim.CPU" Collapsed="true">
+    <Position X="4.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAEAAAAAAAAJABAAAAAAQAAAAAA=</HashCode>
+      <FileName>armsim.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Instruction" />
+      <Property Name="Registers" />
+      <Property Name="Computer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="armsim.Computer" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAEQABAAAAAAAAIKAAAAAAAAI=</HashCode>
+      <FileName>armsim.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ArmSim" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="armsim.Instruction" Collapsed="true">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>armsim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="armsim.ArmSim" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>armsim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

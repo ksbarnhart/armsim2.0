@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2014-10-13T10:52:59" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim' -  (Package)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Branch' -  (Class)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Branch::Branch' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Branch::Decode' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Branch::Execute' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Branch::ToString' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer' -  (Class)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Break' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::cFlag' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Computer' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Computer::options' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::cpu' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::DisableTrace' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::EnableTrace' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::fFlag' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::GetCPU' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::GetMem' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::GetOpts' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::GetRegs' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Load' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Load::filename' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::mem' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::nFlag' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::opts' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::regs' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Run' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Step' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::stepnum' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::stop' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::trace' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Trace' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Trace::c' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Trace::f' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Trace::n' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Trace::progCounter' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Trace::r' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Trace::step' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::Trace::z' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Computer::zFlag' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::CPU' -  (Class)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::CPU::CPU' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::CPU::CPU::m' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::CPU::CPU::r' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::CPU::Decode' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::CPU::Decode::fetch' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::CPU::Execute' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::CPU::Execute::inst' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::CPU::Fetch' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::CPU::mem' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::CPU::regs' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing' -  (Class)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::cond' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::DataProcessing' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::DataProcessing::f' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::DataProcessing::r' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::Decode' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::Execute' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::fetch' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::op2' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::opcode' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::rd' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::regs' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::rn' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::DataProcessing::ToString' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF' -  (Class)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_ehsize' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_entry' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_flags' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_machine' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_phentsize' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_phnum' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_phoff' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_shentsize' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_shnum' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_shoff' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_shstrndx' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_type' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::e_version' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::EI_CLASS' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::EI_DATA' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::EI_MAG0' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::EI_MAG1' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::EI_MAG2' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::EI_MAG3' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::EI_VERSION' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::ELF' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::unused1' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::unused2' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::unused3' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::unused4' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::unused5' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::unused6' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::unused7' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::unused8' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELF::unused9' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELFS' -  (Class)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELFS::ELFS' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELFS::p_align' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELFS::p_filesz' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELFS::p_flags' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELFS::p_memsz' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELFS::p_offset' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELFS::p_paddr' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELFS::p_type' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::ELFS::p_vaddr' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Instruction' -  (Class)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Instruction::Decode' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Instruction::Execute' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Instruction::GetBits' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Instruction::GetBits::data' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Instruction::GetBits::end' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Instruction::GetBits::start' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Instruction::Instruction' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Instruction::ToString' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::LoadStore' -  (Class)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::LoadStore::Decode' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::LoadStore::Execute' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::LoadStore::LoadStore' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::LoadStore::ToString' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Logger' -  (Class)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Logger::Logger' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Logger::myLog' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Logger::WriteLog' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Logger::WriteLog::info' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory' -  (Class)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::ClearMem' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::GetRam' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::Hash' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::Memory' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::Memory::size' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::ram' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::ReadByte' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::ReadByte::addr' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::ReadHalfWord' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::ReadHalfWord::addr' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::ReadWord' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::ReadWord::addr' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::SetFlag' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::SetFlag::addr' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::SetFlag::bit' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::SetFlag::flag' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::SetMem' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::SetMem::size' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::TestFlag' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::TestFlag::addr' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::TestFlag::bit' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::WriteByte' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::WriteByte::addr' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::WriteByte::wbyte' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::WriteHalfWord' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::WriteHalfWord::addr' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::WriteHalfWord::whword' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::WriteWord' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::WriteWord::addr' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Memory::WriteWord::wword' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2' -  (Class)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::Decode' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::Decode::fetch' -  (Parameter)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::Execute' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::immediate' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::Operand2' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::rm' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::rotate' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::rotimm' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::rs' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::shift' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::shiftType' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::ToString' -  (Operation)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Operand2::type' -  (Property)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Options' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::armsim::Registers' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::System' -  (Package)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::System::Byte' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::System::Diagnostics' -  (Package)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::System::Diagnostics::TextWriterTraceListener' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::System::Int16' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::System::UInt16' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject4::System::UInt32' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject4::armsim::Branch to ModelingProject4::armsim::Instruction (Generalization)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject4::armsim::DataProcessing to ModelingProject4::armsim::Instruction (Generalization)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject4::armsim::LoadStore to ModelingProject4::armsim::Instruction (Generalization)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject4::armsim::Registers to ModelingProject4::armsim::Memory (Generalization)" />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="High" Text="(11) type(s) fully reverse engineered." />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="High" Text="(7) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2014-10-13T10:53:04" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>
