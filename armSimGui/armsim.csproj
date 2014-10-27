@@ -58,12 +58,15 @@
     <Compile Include="Instruction.cs" />
     <Compile Include="LoadStore.cs" />
     <Compile Include="Logger.cs" />
+    <Compile Include="LSMult.cs" />
     <Compile Include="Memory.cs" />
+    <Compile Include="Multiply.cs" />
     <Compile Include="Operand2.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registers.cs" />
     <Compile Include="SantasHelpers.cs" />
+    <Compile Include="SWI.cs" />
     <Compile Include="Test.cs" />
     <EmbeddedResource Include="ArmSimForm.resx">
       <DependentUpon>ArmSimForm.cs</DependentUpon>

@@ -58,7 +58,13 @@ namespace armsim
             uint rword = 0;
             if ((addr % 4) == 0)
             {
-                rword = Convert.ToUInt32(BitConverter.ToInt32(ram, Convert.ToInt32(addr)));
+                byte[] bytes = new byte[4];
+                for (int i = 0; i < 4; ++i)
+                {
+                    bytes[i] = ram[addr + i];
+                }
+                rword = BitConverter.ToUInt32(bytes, 0);
+                //Convert.ToUInt32(BitConverter.ToInt32(ram, Convert.ToInt32(addr)));
             }
             else
             { // if the address !divisible by 4

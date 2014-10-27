@@ -27,11 +27,22 @@ namespace armsim
             WriteWord(60, progCounter);
         }
 
+        public void SetStackPointer(uint stackPointer)
+        {
+            WriteWord(13 * 4, stackPointer);
+        }
+
         // returns R15
         public uint GetProgramCounter()
         {
             uint progCounter = this.ReadWord(60);
             return progCounter;
+        }
+
+        public uint GetStackPointer()
+        {
+            uint stackPointer = this.ReadWord(13 * 4);
+            return stackPointer;
         }
     }
 }

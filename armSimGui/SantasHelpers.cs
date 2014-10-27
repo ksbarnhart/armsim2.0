@@ -64,8 +64,10 @@ namespace armsim
                         strm.Read(data, 0, data.Length);
                         // Convert to struct
                         elfHeader = ByteArrayToStructure<ELF>(data);
-                        // set program counter in Memory
+                        // set program counter in Registers
                         regs.SetProgramCounter(elfHeader.e_entry);
+                        // set stack pointer in Registers
+                        regs.SetStackPointer(0x7000);
                         // Read first program header entry
                         strm.Seek(elfHeader.e_phoff, SeekOrigin.Begin);
                         ELFS[] elfArray = new ELFS[elfHeader.e_phnum];

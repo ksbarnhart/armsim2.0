@@ -29,14 +29,30 @@ namespace armsim
 
         public Instruction Decode(uint fetch)
         {
+            // Special Cases
+            if (Instruction.GetBits(fetch, 27, 24) == 15)
+            { // SWI
+                return new SWI(fetch);
+            } else if (Instruction.GetBits(fetch, 27, 21) == 0 &&
+                Instruction.GetBits(fetch, 7, 4) == 9)
+            { // Multiply
+                return new Multiply(fetch, ref regs);
+            }
             switch (Instruction.GetBits(fetch, 27, 26))
             {
-                //Special Cases?
                 case 0: //Data Processing
                     return new DataProcessing(fetch, ref regs);
                 case 1: //Load-Store
-                    return null;
-                case 2: //Branch
+                    return new LoadStore(fetch, ref regs, ref mem);
+                case 2:
+                    if (Instruction.GetBits(fetch, 25, 25) == 1) // Branch
+                    {
+
+                    }
+                    else // LSMult
+                    {
+                        return new LSMult(fetch, ref regs, ref mem);
+                    }
                     return null;
             }
             return null;
@@ -44,7 +60,10 @@ namespace armsim
 
         public void Execute(Instruction inst)
         {
-            inst.Execute();
+            if (inst != null)
+            {
+                inst.Execute();
+            }
         }
     }
 }

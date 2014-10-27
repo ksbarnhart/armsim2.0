@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Threading;
+using System.Text;
 
 namespace armsim
 {
@@ -14,10 +15,12 @@ namespace armsim
     // Simulates the computers; contains the Memory, Registers, and CPU
     public class Computer
     {
+        ArmSimForm myForm;
         Memory mem;
         Registers regs;
         CPU cpu;
         Options opts;
+        FileStream filestream;
         bool stop = false;
         bool trace = true;
         int stepnum = 0;
@@ -36,10 +39,8 @@ namespace armsim
             regs = new Registers();
             regs.SetMem(64);
             cpu = new CPU(ref regs, ref mem);
-            using (StreamWriter sw = new StreamWriter("trace.log", false))
-            {
-
-            }
+            filestream = new FileStream("trace.log", FileMode.Create);
+            filestream.Close();
         }
 
         public Options GetOpts()
@@ -78,13 +79,19 @@ namespace armsim
                 stepnum += 1;
                 uint progCounter = regs.ReadWord(60);
                 Instruction inst = cpu.Decode(fetch);
+                if (inst == null)
+                {
+                    break;
+                }
                 cpu.Execute(inst);
-                fetch = cpu.Fetch();
                 if (trace)
                 {
                     Trace(stepnum, (int)progCounter, nFlag, zFlag, cFlag, fFlag, regs);
                 }
+                regs.WriteWord(60, progCounter + 4);
+                fetch = cpu.Fetch();
             }
+            myForm.Invoke(myForm.myDelegate);
         }
 
         // runs Fetch(), Decode(), and Execute() once
@@ -99,6 +106,7 @@ namespace armsim
             {
                 Trace(stepnum, (int)progCounter, nFlag, zFlag, cFlag, fFlag, regs);
             }
+            regs.WriteWord(60, progCounter + 4);
         }
 
         // calls SantasHelpers to load a file not specified on the command line
@@ -106,57 +114,59 @@ namespace armsim
         {
             mem.ClearMem();
             regs.ClearMem();
+            if (trace) 
+            {
+                DisableTrace();
+            }
             EnableTrace();
             bool b = SantasHelpers.ReadElf(filename, ref mem, ref regs);
             return b;
         }
 
+        public void SetForm(ArmSimForm asf)
+        {
+            myForm = asf;
+        }
+
         public void DisableTrace()
         {
             trace = false;
-            using (StreamWriter sw = File.AppendText("trace.log"))
-            {
-                sw.Close();
-            }
+            filestream.Close();
         }
 
         public void EnableTrace()
         {
             trace = true;
-            using (StreamWriter sw = new StreamWriter("trace.log", false))
-            {
-
-            }
+            filestream = new FileStream("trace.log", FileMode.Create);
         }
+
 
         public void Trace(int step, int progCounter, int n, int z, int c, int f, Registers r)
         {
-            using (StreamWriter sw = File.AppendText("trace.log"))
-            {
+            string tracestr = "";
                 string step_num = Convert.ToString(step);
-                sw.WriteLine(step_num.PadLeft(6, '0') + " " +
-                    Convert.ToString(progCounter) + " " + mem.Hash() + " " +
+                tracestr += (step_num.PadLeft(6, '0') + " " +
+                    string.Format("{0:X8}", progCounter-4) + " " + mem.Hash() + " " +
                     Convert.ToString(n) + Convert.ToString(z) + Convert.ToString(c) +
-                    Convert.ToString(f) + " 0=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(0))) + " 1=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(4))) + " 2=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(8))) + " 3=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(12))));
-                sw.WriteLine("4=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(16))) + " 5=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(20))) + " 6=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(24))) + " 7=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(28))) + " 8=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(32))) + " 9=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(36))));
-                sw.WriteLine("10=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(40))) + " 11=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(44))) + " 12=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(48))) + " 13=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(52))) + " 14=" + string.Format("{0:X8}", Convert.ToString(
-                    r.ReadWord(56))));
-                sw.WriteLine("");
-            }
+                    Convert.ToString(f) + " 0=" + string.Format("{0:X8}", 
+                    r.ReadWord(0)) + " 1=" + string.Format("{0:X8}", 
+                    r.ReadWord(4)) + " 2=" + string.Format("{0:X8}", 
+                    r.ReadWord(8)) + " 3=" + string.Format("{0:X8}", 
+                    r.ReadWord(12)) + "\r\n");
+                tracestr += ("        4=" + string.Format("{0:X8}", 
+                    r.ReadWord(16)) + "  5=" + string.Format("{0:X8}", 
+                    r.ReadWord(20)) + "  6=" + string.Format("{0:X8}",
+                    r.ReadWord(24)) + "  7=" + string.Format("{0:X8}",
+                    r.ReadWord(28)) + "  8=" + string.Format("{0:X8}", 
+                    r.ReadWord(32)) + "  9=" + string.Format("{0:X8}", 
+                    r.ReadWord(36)) + "\r\n");
+                tracestr += ("       10=" + string.Format("{0:X8}", 
+                    r.ReadWord(40)) + " 11=" + string.Format("{0:X8}", 
+                    r.ReadWord(44)) + " 12=" + string.Format("{0:X8}", 
+                    r.ReadWord(48)) + " 13=" + string.Format("{0:X8}", 
+                    r.ReadWord(52)) + " 14=" + string.Format("{0:X8}", 
+                    r.ReadWord(56)) + "\r\n");
+                filestream.Write(Encoding.ASCII.GetBytes(tracestr), 0, tracestr.Length);
         }
     }
 }

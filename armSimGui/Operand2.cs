@@ -9,7 +9,7 @@ namespace armsim
     public class Operand2
     {
         uint rs, rm, shiftType, shift, rotate, immediate, rotimm;
-        string type;
+        string type, shiftString;
         Registers regs;
         public Operand2(Registers r)
         {
@@ -41,22 +41,62 @@ namespace armsim
                     rm = Instruction.GetBits(fetch, 3, 0);
                 }
             }
-
+            switch (shiftType)
+            {
+                case 0: // LSL
+                    shiftString = "lsl";
+                    break;
+                case 1: // LSR
+                    shiftString = "lsr";
+                    break;
+                case 2: // ASR
+                    shiftString = "asr";
+                    break;
+                case 3:
+                    shiftString = "ror";
+                    break;
+                default:
+                    break;
+            }
         }
 
         public uint Execute()
         {
+            uint rmVal = regs.ReadWord(rm * 4);
             switch (type)
             {
                 case "immediate":
                     rotimm = (immediate >> (int)rotate) | (immediate << (32 - (int)rotate));
                     return rotimm;
                 case "regShift":
-                    return 0;
+                    uint rsVal = regs.ReadWord(rs * 4);
+                    return this.Shift(rmVal, (int)rsVal);
                 case "immShift":
-                    return 0;
+                    return this.Shift(rmVal, (int)shift);
             }
             return 0;
+        }
+
+        public uint Shift(uint rmVal, int shiftVal)
+        {
+            uint shiftResult = 0;
+            switch (shiftType)
+            {
+                case 0: // LSL
+                    shiftResult = rmVal << shiftVal;
+                    return shiftResult;
+                case 1: // LSR
+                    shiftResult = rmVal >> shiftVal;
+                    return shiftResult;
+                case 2: // ASR
+                    shiftResult = (uint)((int)rmVal >> shiftVal);
+                    return shiftResult;
+                case 3:
+                    shiftResult = (rmVal >> shiftVal) | (rmVal << (32 - shiftVal));
+                    return shiftResult;
+                default:
+                    return shiftResult;
+            }
         }
 
         public string ToString()
@@ -64,11 +104,19 @@ namespace armsim
             switch (type)
             {
                 case "immediate":
+                    rotimm = (immediate >> (int)rotate) | (immediate << (32 - (int)rotate));
                     return "#" + rotimm;
                 case "regShift":
-                    return null;
+                    return "r" + rm + ", " + shiftString + " r" + rs;
                 case "immShift":
-                    return null;
+                    if (shift == 0)
+                    {
+                        return "r" + rm;
+                    }
+                    else
+                    {
+                        return "r" + rm + ", " + shiftString + " #" + shift;
+                    }
             }
             return null;
         }

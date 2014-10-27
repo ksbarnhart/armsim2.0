@@ -32,15 +32,20 @@ namespace armsim
         {
             switch (opcode)
             {
-                case 0:
+                case 0: // AND
+                    regs.WriteWord(4 * rd, rn & op2.Execute());
                     break;
-                case 1:
+                case 1: // EOR
+                    regs.WriteWord(4 * rd, rn ^ op2.Execute());
                     break;
-                case 2:
+                case 2: // SUB
+                    regs.WriteWord(4 * rd, rn - op2.Execute());
                     break;
-                case 3:
+                case 3: // RSB
+                    regs.WriteWord(4 * rd, op2.Execute() - rn);
                     break;
-                case 4:
+                case 4: // ADD
+                    regs.WriteWord(4 * rd, rn + op2.Execute());
                     break;
                 case 5:
                     break;
@@ -56,14 +61,17 @@ namespace armsim
                     break;
                 case 11:
                     break;
-                case 12:
+                case 12: // ORR
+                    regs.WriteWord(4 * rd, rn | op2.Execute());
                     break;
-                case 13: //MOV
+                case 13: // MOV
                     regs.WriteWord(4 * rd, op2.Execute());
                     break;
-                case 14:
+                case 14: // BIC
+                    regs.WriteWord(4 * rd, rn & ~(op2.Execute()));
                     break;
-                case 15:
+                case 15: // MVN
+                    regs.WriteWord(4 * rd, ~(op2.Execute()));
                     break;
             }
         }
@@ -72,16 +80,16 @@ namespace armsim
         {
             switch (opcode)
             {
-                case 0:
-                    return null;
-                case 1:
-                    return null;
-                case 2:
-                    return null;
-                case 3:
-                    return null;
-                case 4:
-                    return null;
+                case 0: // AND
+                    return string.Format("{0:X8}", fetch) + "   and r" + rd + ", r" + rn + ", " + op2.ToString();
+                case 1: // EOR
+                    return string.Format("{0:X8}", fetch) + "   eor r" + rd + ", r" + rn + ", " + op2.ToString();
+                case 2: // SUB
+                    return string.Format("{0:X8}", fetch) + "   sub r" + rd + ", r" + rn + ", " + op2.ToString();
+                case 3: // RSB
+                    return string.Format("{0:X8}", fetch) + "   rsb r" + rd + ", r" + rn + ", " + op2.ToString();
+                case 4: // ADD
+                    return string.Format("{0:X8}", fetch) + "   add r" + rd + ", r" + rn + ", " + op2.ToString();
                 case 5:
                     return null;
                 case 6:
@@ -96,14 +104,14 @@ namespace armsim
                     return null;
                 case 11:
                     return null;
-                case 12:
-                    return null;
-                case 13: //MOV
-                    return "mov r" + rd + ", " + op2.ToString();
-                case 14:
-                    return null;
-                case 15:
-                    return null;
+                case 12: // ORR
+                    return string.Format("{0:X8}", fetch) + "   orr r" + rd + ", r" + rn + ", " + op2.ToString();
+                case 13: // MOV
+                    return string.Format("{0:X8}", fetch) + "   mov r" + rd + ", " + op2.ToString();
+                case 14: // BIC
+                    return string.Format("{0:X8}", fetch) + "   bic r" + rd + ", r" + rn + ", " + op2.ToString();
+                case 15: // MVN
+                    return string.Format("{0:X8}", fetch) + "   mvn r" + rd + ", " + op2.ToString();
             }
             return null;
         }

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.contFull = new System.Windows.Forms.SplitContainer();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtMem = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -68,6 +69,7 @@
             this.Word3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Word4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabDisassembly = new System.Windows.Forms.TabPage();
+            this.txtDisassembly = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlRegisters = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -76,6 +78,9 @@
             this.RegName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabStack = new System.Windows.Forms.TabPage();
+            this.gridStack = new System.Windows.Forms.DataGridView();
+            this.StackAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stack = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.contFull)).BeginInit();
             this.contFull.Panel1.SuspendLayout();
@@ -95,10 +100,13 @@
             this.tabControl1.SuspendLayout();
             this.tabMemory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMem)).BeginInit();
+            this.tabDisassembly.SuspendLayout();
             this.pnlRegisters.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabRegisters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridRegs)).BeginInit();
+            this.tabStack.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridStack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,6 +118,7 @@
             // 
             // contFull.Panel1
             // 
+            this.contFull.Panel1.Controls.Add(this.checkBox1);
             this.contFull.Panel1.Controls.Add(this.label10);
             this.contFull.Panel1.Controls.Add(this.txtMem);
             this.contFull.Panel1.Controls.Add(this.tableLayoutPanel1);
@@ -128,6 +137,18 @@
             this.contFull.Size = new System.Drawing.Size(617, 325);
             this.contFull.SplitterDistance = 107;
             this.contFull.TabIndex = 0;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.checkBox1.Location = new System.Drawing.Point(0, 150);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(107, 21);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "Decimal";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label10
             // 
@@ -510,6 +531,7 @@
             // 
             // tabDisassembly
             // 
+            this.tabDisassembly.Controls.Add(this.txtDisassembly);
             this.tabDisassembly.Location = new System.Drawing.Point(4, 25);
             this.tabDisassembly.Name = "tabDisassembly";
             this.tabDisassembly.Padding = new System.Windows.Forms.Padding(3);
@@ -517,6 +539,17 @@
             this.tabDisassembly.TabIndex = 1;
             this.tabDisassembly.Text = "Disassembly";
             this.tabDisassembly.UseVisualStyleBackColor = true;
+            // 
+            // txtDisassembly
+            // 
+            this.txtDisassembly.AcceptsReturn = true;
+            this.txtDisassembly.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDisassembly.Location = new System.Drawing.Point(3, 3);
+            this.txtDisassembly.Multiline = true;
+            this.txtDisassembly.Name = "txtDisassembly";
+            this.txtDisassembly.ReadOnly = true;
+            this.txtDisassembly.Size = new System.Drawing.Size(313, 194);
+            this.txtDisassembly.TabIndex = 0;
             // 
             // textBox1
             // 
@@ -590,6 +623,7 @@
             // 
             // tabStack
             // 
+            this.tabStack.Controls.Add(this.gridStack);
             this.tabStack.Location = new System.Drawing.Point(4, 25);
             this.tabStack.Name = "tabStack";
             this.tabStack.Padding = new System.Windows.Forms.Padding(3);
@@ -597,6 +631,32 @@
             this.tabStack.TabIndex = 1;
             this.tabStack.Text = "Stack";
             this.tabStack.UseVisualStyleBackColor = true;
+            // 
+            // gridStack
+            // 
+            this.gridStack.AllowUserToDeleteRows = false;
+            this.gridStack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridStack.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StackAddr,
+            this.Stack});
+            this.gridStack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridStack.Location = new System.Drawing.Point(3, 3);
+            this.gridStack.Name = "gridStack";
+            this.gridStack.RowTemplate.Height = 24;
+            this.gridStack.Size = new System.Drawing.Size(157, 288);
+            this.gridStack.TabIndex = 0;
+            // 
+            // StackAddr
+            // 
+            this.StackAddr.HeaderText = "StackAddr";
+            this.StackAddr.Name = "StackAddr";
+            this.StackAddr.ReadOnly = true;
+            // 
+            // Stack
+            // 
+            this.Stack.HeaderText = "Stack";
+            this.Stack.Name = "Stack";
+            this.Stack.ReadOnly = true;
             // 
             // ArmSimForm
             // 
@@ -628,10 +688,14 @@
             this.tabControl1.ResumeLayout(false);
             this.tabMemory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridMem)).EndInit();
+            this.tabDisassembly.ResumeLayout(false);
+            this.tabDisassembly.PerformLayout();
             this.pnlRegisters.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabRegisters.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridRegs)).EndInit();
+            this.tabStack.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridStack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -687,6 +751,11 @@
         private System.Windows.Forms.ToolStripMenuItem menuBreak;
         private System.Windows.Forms.ToolStripMenuItem menuTrace;
         private System.Windows.Forms.ToolStripMenuItem menuReset;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txtDisassembly;
+        private System.Windows.Forms.DataGridView gridStack;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StackAddr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stack;
 
 
     }

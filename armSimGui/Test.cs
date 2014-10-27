@@ -43,21 +43,52 @@ namespace armsim
             Debug.Assert(comp.Load("test3.exe"));
             Debug.Assert(comp.GetMem().Hash() == "977159b662ac4e450ed62063fba27029".ToUpper());
 
-            //uint progCounter = comp.GetRegs().GetProgramCounter();
-            //comp.Step();
-            //uint newCounter = comp.GetRegs().GetProgramCounter();
-            //Debug.Assert(newCounter > progCounter);
-            //comp.GetRegs().IncProgramCounter();
-            //Debug.Assert(comp.GetRegs().GetProgramCounter() > newCounter);
+            uint progCounter = comp.GetRegs().GetProgramCounter();
+            comp.Step();
+            uint newCounter = comp.GetRegs().GetProgramCounter();
+            Debug.Assert(newCounter > progCounter);
+            comp.GetRegs().IncProgramCounter();
+            Debug.Assert(comp.GetRegs().GetProgramCounter() > newCounter);
 
-            //Debug.Assert(comp.GetCPU().Fetch() == comp.GetMem().ReadWord(
-            //    Convert.ToUInt32(comp.GetRegs().GetProgramCounter())));
-
-            Instruction inst = comp.GetCPU().Decode(0xe3a02030);
+            Instruction inst = comp.GetCPU().Decode(0xE3A02030);
             comp.GetCPU().Execute(inst);
             string str = inst.ToString();
-            Debug.Assert(str == "mov r2, #48");
+            Debug.Assert(str == "E3A02030   mov r2, #48");
             Debug.Assert(comp.GetRegs().ReadWord(8) == 48);
+
+            inst = comp.GetCPU().Decode(0xE3E03001);
+            comp.GetCPU().Execute(inst);
+            str = inst.ToString();
+            Debug.Assert(str == "E3E03001   mvn r3, #1");
+            int mvn = ~1;
+            Debug.Assert((int)comp.GetRegs().ReadWord(12) == mvn);
+
+            inst = comp.GetCPU().Decode(0xE2445003);
+            comp.GetCPU().Execute(inst);
+            str = inst.ToString();
+            Debug.Assert(str == "E2445003   sub r5, r4, #3");
+
+            inst = comp.GetCPU().Decode(0xE2645003);
+            comp.GetCPU().Execute(inst);
+            str = inst.ToString();
+            Debug.Assert(str == "E2645003   rsb r5, r4, #3");
+
+            inst = comp.GetCPU().Decode(0xE20020FF);
+            comp.GetCPU().Execute(inst);
+            str = inst.ToString();
+            Debug.Assert(str == "E20020FF   and r2, r0, #255");
+            Debug.Assert(comp.GetRegs().ReadWord(8) == comp.GetRegs().ReadWord(0));
+
+            inst = comp.GetCPU().Decode(0xE3802012);
+            comp.GetCPU().Execute(inst);
+            str = inst.ToString();
+            Debug.Assert(str == "E3802012   orr r2, r0, #18");
+
+            inst = comp.GetCPU().Decode(0xE2202FB7);
+            comp.GetCPU().Execute(inst);
+            str = inst.ToString();
+            Debug.Assert(str == "E2202FB7   eor r2, r0, #732");
+
 
             Console.WriteLine("All Tests Passed.");
         }
